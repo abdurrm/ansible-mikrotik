@@ -7,7 +7,7 @@
 # pty=False
 #
 - name: Mikrotik Backup Device Configuration
-  hosts: mikrotik
+  hosts: tik-abdurrm
   vars:
     ftpserver_var: 172.18.3.18
     ftpuser_var: abdurrm
@@ -15,7 +15,7 @@
 
   connection: mikrotik
   user: rancid
-  gather_facts: no
+  gather_facts: yes
   tasks:
    - name: Performing backup of Mikrotik to local storage
      raw: /system backup save name={{inventory_hostname}}
