@@ -7,7 +7,7 @@
 # pty=False
 #
 - name: Mikrotik Backup Device Configuration
-  hosts: gw-tik
+  hosts: 10.0.0.1
   vars:
     ftpserver_var: 172.18.3.18
     ftpuser_var: abdurrm
