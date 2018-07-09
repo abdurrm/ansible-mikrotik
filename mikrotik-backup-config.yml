@@ -14,8 +14,8 @@
     ftppass_var: dj4R03m&
 
   connection: paramiko
-  user: rancid
-  gather_facts: yes
+  user: admin
+  gather_facts: no
   tasks:
    - name: Performing backup of Mikrotik to local storage
      raw: /system backup save name={{inventory_hostname}}
