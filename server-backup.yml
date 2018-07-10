@@ -1,0 +1,18 @@
+---
+# An Ansible Playbook to backup the Mikrotik device's configuration to both script and backup file
+# Version 1 - 07/01/2017
+#
+# ansible.cfg
+# [paramiko_connection]
+# pty=False
+#
+- name: Mikrotik Backup Device Configuration
+  hosts: server
+  connection: paramiko
+  user: rancid
+  gather_facts: no
+  tasks:
+   - name: Backup Firewall
+     raw: cp /etc/sysconfig/iptables /etc/sysconfig/iptables_BAK
+   - name: Exporting Firewall
+     raw: cp /etc/sysconfig/iptables_BAK /etc/sysconfig/iptables_BAK2
