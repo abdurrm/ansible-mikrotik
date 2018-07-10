@@ -15,7 +15,7 @@
 
   connection: paramiko
   user: rancid
-  gather_facts: yes
+  gather_facts: no
   tasks:
    - name: Performing backup of Mikrotik to local storage
      raw: /system backup save name={{inventory_hostname}}
