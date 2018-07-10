@@ -6,7 +6,7 @@
 # [paramiko_connection]
 # pty=False
 #
-- name: Mikrotik Backup Device Configuration
+- name: Server Backup Device Configuration
   hosts: server
   connection: paramiko
   user: root
