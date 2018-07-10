@@ -13,6 +13,6 @@
   gather_facts: no
   tasks:
    - name: Backup Firewall
-     raw: cp /etc/sysconfig/iptables /etc/sysconfig/iptables_BAK
+     raw: df -h
    - name: Exporting Firewall
-     raw: cp /etc/sysconfig/iptables_BAK /etc/sysconfig/iptables_BAK2
+     raw: ps a
