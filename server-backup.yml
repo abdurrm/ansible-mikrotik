@@ -9,7 +9,7 @@
 - name: Mikrotik Backup Device Configuration
   hosts: server
   connection: paramiko
-  user: rancid
+  user: root
   gather_facts: no
   tasks:
    - name: Backup Firewall
