@@ -17,14 +17,8 @@
   user: rancid
   gather_facts: no
   tasks:
-#   - name: Performing backup of Mikrotik to local storage
-#     raw: /system backup save name={{inventory_hostname}}
-
-   - name: Exporting current configuration to text
+   - name: Performing backup of Mikrotik to local storage
+     raw: /system backup save name={{inventory_hostname}}
      raw: /export file={{inventory_hostname}}
-
-   - name: FTP backup file
      raw: /tool fetch address={{ftpserver_var}} src-path={{inventory_hostname}}.backup user={{ftpuser_var}} mode=ftp dst-path=/upload/{{inventory_hostname}}.backup upload=yes
-
-   - name: FTP export config
      raw: /tool fetch address={{ftpserver_var}} src-path={{inventory_hostname}}.rsc user={{ftpuser_var}} mode=ftp dst-path=/upload/{{inventory_hostname}}.rsc upload=yes
